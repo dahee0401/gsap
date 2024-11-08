@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 로그인 구현
+            let userName = prompt('사용자 이름을 입력해주세요.', '');
+
+            // 이름
+            if (userName == 'Admin') {
+                let passWord = prompt('비밀번호를 입력하세요.', '');
+                // prompt(passWord);
+                //비번
+                if (passWord == 'The Master') {
+                    alert('환영합니다!');
+                } else if (passWord == '' || passWord == null) {
+                    alert('취소되었습니다');
+                } else {
+                    ('인증에 실패하였습니다.');
+                }
+            } else if (userName == '' || userName == null) {
+                alert('취소되었습니다.');
+            } else {
+                alert('인증에 실패하였습니다.');
+            }
+        </script>
+    </body>
+</html>

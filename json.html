@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // let user = {
+            //     name: 'John',
+            //     age: 25,
+            //     roles: {
+            //         isAdmin: false,
+            //         isEditor: true,
+            //     },
+            // };
+
+            // console.log(JSON.stringify(user, null, 2));
+            /* 공백 문자 두 개를 사용하여 들여쓰기함:
+            {
+              "name": "John",
+              "age": 25,
+              "roles": {
+                "isAdmin": false,
+                "isEditor": true
+              }
+            }
+            */
+
+            /* JSON.stringify(user, null, 4)라면 아래와 같이 좀 더 들여써집니다.
+            {
+                "name": "John",
+                "age": 25,
+                "roles": {
+                    "isAdmin": false,
+                    "isEditor": true
+                }
+            }
+            */
+
+            // let room = {
+            //     number: 23,
+            //     toJSON() {
+            //         return this.number;
+            //     },
+            // };
+
+            // let meetup = {
+            //     title: 'Conference',
+            //     room,
+            // };
+
+            // console.log(JSON.stringify(room)); // 23
+
+            // console.log(JSON.stringify(meetup));
+            /*
+              {
+                "title":"Conference",
+                "room": 23
+              }
+            */
+            let user = {
+                name: 'John Smith',
+                age: 35,
+            };
+            // 1. user 객체를 JSON 문자열로 변환
+            let userJson = JSON.stringify(user);
+
+            // 2. 그 문자열을 다시 객체로 변환
+            let user2 = JSON.parse(userJson);
+
+            console.log(user2);
+        </script>
+    </body>
+</html>

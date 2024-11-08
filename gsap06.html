@@ -369,14 +369,14 @@
                     duration: 1,
                     ease: 'circ.out',
                     stagger: {
+                        //시간차
                         amount: 1,
                         from: 'random',
                     },
                     scrollTrigger: {
                         trigger: target,
                         start: 'top bottom',
-                        end: '+=400',
-                        markers: false,
+                        markers: true,
                     },
                 });
             });
